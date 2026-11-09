@@ -33,8 +33,7 @@
 <img src="assets/m2-sec-highscore.svg" width="880" alt="High score">
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=gabriel-pglv&show_icons=true&hide_border=true&bg_color=07090C&title_color=3DF2FF&text_color=F4F4F4&icon_color=FF009B&locale=pt-br" height="165" alt="Estatísticas do GitHub">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=gabriel-pglv&layout=compact&hide_border=true&bg_color=07090C&title_color=3DF2FF&text_color=F4F4F4&locale=pt-br" height="165" alt="Linguagens mais usadas">
+  <img src="assets/m2-highscore.svg" width="880" alt="High score: 69 PRs merged, 101 commits, 2 stages clear, 1 PR open source, 8 semestres">
 </p>
 
 <p align="center">
