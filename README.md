@@ -4,13 +4,20 @@
 
 <img src="assets/m2-sec-player.svg" width="880" alt="Player select">
 
-<p align="center">
-  <b>PLAYER 1 · GABRIEL JESUS · SOLUTIONS ENGINEER</b><br>
-  Fintech de pagamentos (Pix parcelado). Nível pleno.<br>
-  Especial: <code>INTEGRAÇÃO</code> de plataformas de e-commerce · <code>AUTOMAÇÃO</code> de operações · <code>INCIDENTE</code> sob controle · <code>SUPORTE</code> técnico.<br>
-  Combo: Engenharia + Produto + Comercial + CS + parceiros, no mesmo time.<br>
-  Em treino: Engenharia da Computação, 8º semestre.
-</p>
+<table align="center" border="0">
+  <tr>
+    <td width="300" align="center" valign="middle">
+      <img src="assets/m2-player.svg" width="280" alt="Sprite pixel art de Gabriel Jesus: cabelo com degradê, cavanhaque, brincos, camiseta preta e braços cruzados com tatuagens">
+    </td>
+    <td valign="middle">
+      <b>PLAYER 1 · GABRIEL JESUS · SOLUTIONS ENGINEER</b><br>
+      Fintech de pagamentos (Pix parcelado). Nível pleno.<br>
+      Especial: <code>INTEGRAÇÃO</code> de plataformas de e-commerce · <code>AUTOMAÇÃO</code> de operações · <code>INCIDENTE</code> sob controle · <code>SUPORTE</code> técnico.<br>
+      Combo: Engenharia + Produto + Comercial + CS + parceiros, no mesmo time.<br>
+      Em treino: Engenharia da Computação, 8º semestre.
+    </td>
+  </tr>
+</table>
 
 <img src="assets/m2-sec-stages.svg" width="880" alt="Stage select">
 
