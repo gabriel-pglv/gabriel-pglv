@@ -1,0 +1,50 @@
+name: Atualizar placar
+
+on:
+  schedule:
+    - cron: "0 9 * * 1"   # toda segunda, 09:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  placar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verificar secret
+        id: token
+        env:
+          PROFILE_TOKEN: ${{ secrets.PROFILE_TOKEN }}
+        run: |
+          if [ -z "$PROFILE_TOKEN" ]; then
+            echo "::warning::Secret PROFILE_TOKEN ausente: o placar não foi atualizado (sem ele a contagem ignoraria os repositórios privados)."
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Buscar números
+        if: steps.token.outputs.ok == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN }}
+        run: python3 -I scripts/placar.py | tee -a "$GITHUB_ENV"
+
+      - name: Regenerar SVGs
+        if: steps.token.outputs.ok == 'true'
+        run: python3 -I scripts/gen.py --only m2
+
+      - name: Commit
+        if: steps.token.outputs.ok == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- assets; then
+            echo "Placar sem mudança."
+          else
+            git add assets
+            git commit -m "Placar: $PRS_MERGED PRs, $COMMITS commits ($DATA)"
+            git push
+          fi
